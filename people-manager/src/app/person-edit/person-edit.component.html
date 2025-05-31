@@ -1,0 +1,31 @@
+<h2>{{ isNew ? 'Add New Person' : 'Edit Person' }}</h2>
+<form (ngSubmit)="savePerson()" #personForm="ngForm">
+  <label>
+    Name:
+    <input [(ngModel)]="person.name" name="name" required />
+  </label>
+  <br><br>
+  <label>
+    Age:
+    <input type="number" [(ngModel)]="person.age" name="age" required min="0" />
+  </label>
+  <br><br>
+  <label>
+    Gender:
+    <select [(ngModel)]="person.gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+  <br><br>
+  <label>
+    Mobile:
+    <input [(ngModel)]="person.mobile" name="mobile" required pattern="^[0-9]{10}$" />
+  </label>
+  <br><br>
+  <div *ngIf="error" style="color:red;">{{error}}</div>
+  <button type="submit" [disabled]="personForm.invalid">{{ isNew ? 'Add' : 'Update' }}</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</form>

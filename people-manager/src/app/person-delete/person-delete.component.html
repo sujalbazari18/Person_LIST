@@ -1,0 +1,5 @@
+<h2>Delete Person</h2>
+<p>Are you sure you want to delete this person?</p>
+<div *ngIf="error" style="color:red;">{{error}}</div>
+<button (click)="deletePerson()">Yes, Delete</button>
+<button (click)="cancel()">Cancel</button>
