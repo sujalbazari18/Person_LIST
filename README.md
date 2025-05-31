@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Person_LIST
 =======
 People Manager
@@ -41,8 +40,7 @@ MongoDB (running locally or in the cloud)
 
 1. Clone the Repositories
 bash
-git clone https://github.com/YOUR_USERNAME/people-manager-frontend.git
-git clone https://github.com/YOUR_USERNAME/people-manager-backend.git
+git clone https://github.com/sujalbazari18/Person_LIST.git
 2. Backend Setup
 bash
 cd people-manager-backend
@@ -50,14 +48,12 @@ npm install
 Configure MongoDB
 By default, the app connects to mongodb://localhost:27017/people_db
 
-To change, edit config/db.config.js
-
 Start the Backend
 bash
 node app.js
-The backend will run on http://localhost:3000
+The backend will run on http://localhost:4200
 
-3. Frontend Setup
+4. Frontend Setup
 bash
 cd people-manager-frontend
 npm install
